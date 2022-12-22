@@ -9,6 +9,8 @@
 # --------------------------------
 # Секция неизменяемых данных
 # https://www.sourceware.org/binutils/docs/as/Section.html
+# Линковщик понимает, что секция не изменяемая по названию
+# (похоже, это зависит от компоновщика)
 
 .section .rodata             # read-only static data
 
@@ -49,7 +51,10 @@ main:
 
     # Используем Position Independent Code
     lea     rdi, [empty+rip]
-    call    puts                        # Используем функцию puts
+    call    puts
+
+    # Используем функцию puts: man puts
+    # https://man7.org/linux/man-pages/man3/puts.3.html
 
     xor     eax, eax                    # Возвращаем код успешного завершения
 
