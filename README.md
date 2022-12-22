@@ -7,9 +7,10 @@ sourceware.org:
 linuxassembly.org:
     [Документация по GNU as](http://www.linuxassembly.org/assembly-intro.html)
 
+[GNU lightning](https://www.gnu.org/software/lightning/)
 
 
 01-begin
     01-empty
+        Компиляция пустого файла (выводит сообщение)
         Мнемоника Intel
-        Компиляция пустого файла
