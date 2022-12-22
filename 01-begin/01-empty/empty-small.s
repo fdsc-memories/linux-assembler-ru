@@ -3,7 +3,6 @@
 
 .section .rodata
 
-.global empty
 empty:
 .string "Text for output to console"
 

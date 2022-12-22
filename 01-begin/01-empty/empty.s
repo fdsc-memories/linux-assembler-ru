@@ -1,3 +1,9 @@
+# Этот файл является примером простой программы
+# Она лишь выводит на экран строку "Text for output to console"
+# и завершается, выдавая 0 в качестве кода завершения
+# Такая же программа, но предназначенная для машинной обработки, находится в empty-small.s
+
+
 # Используем интеловский синтаксис
 # https://www.sourceware.org/binutils/docs/as/i386_002dOptions.html
 # https://www.sourceware.org/binutils/docs/as/i386_002dVariations.html
@@ -14,7 +20,10 @@
 
 .section .rodata             # read-only static data
 
-.global empty
+# .global означает, что это имя будет видно для компоновщика
+# Компоновщик (линковщик) сможет связать его с другими именами в других объектных файлах
+# В данном случае, это не нужно, т.к. строка empty используется только внутри этой программы
+# .global empty
 empty:
   .string "Text for output to console"    # zero-terminated C string
 
