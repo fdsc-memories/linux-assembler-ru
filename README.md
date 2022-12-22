@@ -9,8 +9,11 @@ linuxassembly.org:
 
 [GNU lightning](https://www.gnu.org/software/lightning/)
 
+Полезные команды
+nm; ld; ldd; ar
+
 
 01-begin
-    01-empty
-        Компиляция пустого файла (выводит сообщение)
+    01-empty/build.sh
+        Компиляция пустого файла (только выводит сообщение)
         Мнемоника Intel

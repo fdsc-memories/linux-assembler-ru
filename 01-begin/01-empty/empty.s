@@ -49,12 +49,16 @@ main:
     push    rbp
     mov     rbp, rsp                    # Создаём фрейм в стеке
 
+    # Используем функцию puts: man puts
+    # Она выводит на стандартный вывод строку, оканчивающуюся нулём
+    # https://man7.org/linux/man-pages/man3/puts.3.html
+
     # Используем Position Independent Code
     lea     rdi, [empty+rip]
     call    puts
-
-    # Используем функцию puts: man puts
-    # https://man7.org/linux/man-pages/man3/puts.3.html
+    
+    # linux-source - пакет с исходниками ядра Linux
+    # Там можно дополнительно посмотреть заголовочные файлы Linux (/usr/src)
 
     xor     eax, eax                    # Возвращаем код успешного завершения
 
