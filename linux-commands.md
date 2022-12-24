@@ -20,5 +20,3 @@ strace -e trace=open,openat,creat date
 
 Ещё
 ltrace -S myprogram
-
-[GNU lightning](https://www.gnu.org/software/lightning/)
