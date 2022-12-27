@@ -14,9 +14,9 @@ cat /proc/<PID>/maps
 
 lsof;
 
-strace -e trace=open,openat,creat myprogram
+strace -fe trace=open,openat,creat -o out.log myprogram
 Например
-strace -e trace=open,openat,creat date
+strace -fe trace=open,openat,creat -o out.log date
 
 Ещё
 ltrace -S myprogram
