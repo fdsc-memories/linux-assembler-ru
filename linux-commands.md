@@ -14,9 +14,13 @@ cat /proc/<PID>/maps
 
 lsof;
 
+# man strace
 strace -fe trace=open,openat,creat -o out.log myprogram
 Например
 strace -fe trace=open,openat,creat -o out.log date
+
+# file process net signal memory %creds
+strace -fe trace=%file,%proces -o /inRam/out.log date
 
 Ещё
 ltrace -S myprogram
