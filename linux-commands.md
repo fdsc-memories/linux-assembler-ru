@@ -19,6 +19,8 @@ strace -fe trace=open,openat,creat -o out.log myprogram
 Например
 strace -fe trace=open,openat,creat -o out.log date
 
+# вместо open и т.п. можно написать %file
+
 # file process net signal memory %creds
 strace -fe trace=%file,%proces -o /inRam/out.log date
 
