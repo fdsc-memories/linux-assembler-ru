@@ -14,10 +14,16 @@ cat /proc/<PID>/maps
 
 lsof;
 
+    
 # man strace
+# Выведем все вызовы функций в таблицу (date - трассируемый процесс)
+strace -cf date
+
+
 strace -fe trace=open,openat,creat -o out.log myprogram
 Например
 strace -fe trace=open,openat,creat -o out.log date
+# trace=all допустимо
 
 # вместо open и т.п. можно написать %file
 
